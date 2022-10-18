@@ -35,34 +35,34 @@ class _AllNutsProductsPageState extends State<AllNutsProductsPage>
 
   List<Map<String, String>> itemList = [
     {
-      'productName': 'Dry Fruits',
+      'productName': 'Cashew(White Wholes)',
       'price': '397',
       'weight': '200 gm',
-      'imgUrl': 'assets/nuts.png'
+      'imgUrl': 'assets/product2.png'
     },
     {
-      'productName': 'Dry Fruits',
+      'productName': 'Raisins',
       'price': '259',
       'weight': '100 gm',
       'imgUrl': 'assets/product1.png'
     },
     {
-      'productName': 'Dry Fruits',
+      'productName': 'Cashew(Scorched Wholes)',
       'price': '243',
       'weight': '250 gm',
-      'imgUrl': 'assets/special.png'
+      'imgUrl': 'assets/product2.png'
     },
     {
-      'productName': 'Special',
+      'productName': 'Cashew(Dessert Pieces)',
       'price': '415',
       'weight': '300 gm',
-      'imgUrl': 'assets/product1.png'
+      'imgUrl': 'assets/product2.png'
     },
     {
-      'productName': 'Nuts',
+      'productName': 'Cashew(Mixed Wholes)',
       'price': '397',
       'weight': '200 gm',
-      'imgUrl': 'assets/nuts.png'
+      'imgUrl': 'assets/product1.png'
     },
   ];
   @override

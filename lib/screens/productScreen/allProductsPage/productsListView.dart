@@ -57,7 +57,7 @@ class _ProductsListViewState extends State<ProductsListView> {
                       Text(widget.itemList[index]['productName']!,
                           style: TextStyle(
                               color: Colors.black,
-                              fontSize: 18.sp,
+                              fontSize: 16.sp,
                               fontWeight: FontWeight.bold)),
                       Text(widget.itemList[index]['weight']!,
                           style:

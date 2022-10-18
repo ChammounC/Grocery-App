@@ -39,25 +39,6 @@ class ProductsPage extends StatelessWidget {
                                 title: 'Nuts & Snacks',
                               )))),
               card(
-                  'assets/dairy1.jpg',
-                  'Dairy Products',
-                  '158',
-                  'Milk, Eggs, Bread, Chemical Free Dals, theHarmony Specials, Paneer',
-                  () => Navigator.push(
-                      context,
-                      MaterialPageRoute(
-                          builder: (context) => const AllDairyProductsPage(
-                                itemList: [
-                                  'Milk',
-                                  'Eggs',
-                                  'Bread',
-                                  'Chemical Free Dals',
-                                  'theHarmony Specials',
-                                  'Paneer'
-                                ],
-                                title: 'Dairy Products',
-                              )))),
-              card(
                   'assets/tea.jpg',
                   'Tea Products',
                   '67',
@@ -77,6 +58,25 @@ class ProductsPage extends StatelessWidget {
                               'Yerba Mate & Guayusa'
                             ],
                             title: 'Tea Products',
+                          )))),
+              card(
+                  'assets/dairy1.jpg',
+                  'Dairy Products',
+                  '158',
+                  'Milk, Eggs, Bread, Chemical Free Dals, theHarmony Specials, Paneer',
+                      () => Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                          builder: (context) => const AllDairyProductsPage(
+                            itemList: [
+                              'Milk',
+                              'Eggs',
+                              'Bread',
+                              'Chemical Free Dals',
+                              'theHarmony Specials',
+                              'Paneer'
+                            ],
+                            title: 'Dairy Products',
                           )))),
             ],
           ),

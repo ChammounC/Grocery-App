@@ -17,7 +17,7 @@ class CustomCard extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      padding: EdgeInsets.all(5),
+      padding: EdgeInsets.only(left:5,top:5,bottom:5),
       margin: EdgeInsets.all(15),
       decoration: BoxDecoration(
         color: Colors.white,
@@ -50,15 +50,16 @@ class CustomCard extends StatelessWidget {
                 Padding(padding:EdgeInsets.only(left:10.sp),child: Text('\u{20B9} $price',style: TextStyle(fontSize: 14.sp,color: Colors.grey),)),
                 Container(
                   decoration: BoxDecoration(
-                      borderRadius: BorderRadius.circular(6.0),
-                      border: Border.all(
-                          color: AppColors.PRIMARY_COLOR
-                      )
+                      borderRadius: BorderRadius.only(topLeft: Radius.circular(8),bottomLeft: Radius.circular(8),),
+                      // border: Border.all(
+                      //     color: AppColors.PRIMARY_COLOR
+                      // ),
+                    color: AppColors.PRIMARY_COLOR
                   ),
-                  width: 0.18.sw,
-                  height:0.03.sh,
+                  width: 0.045.sh,
+                  height:0.04.sh,
                   child: Center(
-                    child: Text('Add',style: TextStyle(color: AppColors.PRIMARY_COLOR),),
+                    child: Icon(Icons.add,color:Colors.white),
                   ),
                 ),
               ],

@@ -4,6 +4,7 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:intl/intl.dart';
 import 'package:provider/provider.dart';
 import 'package:theharmony/constants/colors.dart';
+import 'package:theharmony/widgets/balanceCard.dart';
 
 import '../../provider/providers/cartItemCount.dart';
 import '../../widgets/customButtons/minus.dart';
@@ -33,6 +34,12 @@ class _ProductDetailPageState extends State<ProductDetailPage> {
                 color: AppColors.PRIMARY_COLOR,
               )),
         ),
+        actions: [
+          Container(
+              padding: EdgeInsets.symmetric(vertical: 8.0),
+              margin: const EdgeInsets.only(right: 8.0),
+              child: BalanceCard()),
+        ],
         backgroundColor: Colors.transparent,
         elevation: 0,
       ),
@@ -45,12 +52,17 @@ class _ProductDetailPageState extends State<ProductDetailPage> {
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
               Container(
-                color: AppColors.PRIMARY_COLOR.withOpacity(0.5),
+
                 padding:
                     EdgeInsets.symmetric(vertical: 0.05.sh, horizontal: 0.1.sw),
+                margin:EdgeInsets.symmetric(horizontal: 0.02.sw),
                 width: 1.sw,
                 height: 0.6.sw,
-                child: Image.asset(widget.itemDetails['imgUrl']!),
+                decoration: BoxDecoration(
+                  borderRadius: BorderRadius.circular(12.0),color: AppColors.PRIMARY_COLOR.withOpacity(0.5),
+                ),
+                child: ClipRRect(
+                    borderRadius:BorderRadius.circular(12.0),child: Image.asset(widget.itemDetails['imgUrl']!)),
               ),
               Padding(
                 padding:
