@@ -29,14 +29,14 @@ class _ProductDetailPageState extends State<ProductDetailPage> {
           padding: const EdgeInsets.only(left: 8.0),
           child: GestureDetector(
               onTap: () => Navigator.pop(context),
-              child: Icon(
+              child:const Icon(
                 Icons.arrow_back_ios,
                 color: AppColors.PRIMARY_COLOR,
               )),
         ),
         actions: [
           Container(
-              padding: EdgeInsets.symmetric(vertical: 8.0),
+              padding:const EdgeInsets.symmetric(vertical: 8.0),
               margin: const EdgeInsets.only(right: 8.0),
               child: BalanceCard()),
         ],

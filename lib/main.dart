@@ -66,44 +66,6 @@ class _HomePageState extends State<HomePage> {
   Widget build(BuildContext context) {
     return Scaffold(
       body: _pages[_selectedIndex],
-      // body: NestedScrollView(
-      //   physics: BouncingScrollPhysics(),
-      //   headerSliverBuilder: (context, innerBoxIsScrolled) {
-      //     return [
-      //       SliverAppBar(
-      //         elevation: 0,
-      //         snap: false,
-      //         excludeHeaderSemantics: true,
-      //         pinned: true,
-      //         floating: true,
-      //         flexibleSpace: FlexibleSpaceBar(
-      //           expandedTitleScale: 2.0,
-      //           // titlePadding: EdgeInsets.only(top: 10.sm,left: 10.sm),
-      //           title: Text("mepeto",
-      //               style: TextStyle(
-      //                 color: AppColors.PRIMARY_COLOR,
-      //                 fontSize: 30.sp,
-      //               )),
-      //         ),
-      //         expandedHeight: 150.sm,
-      //         backgroundColor: Colors.transparent,
-      //         actions: <Widget>[
-      //           IconButton(
-      //             color: AppColors.PRIMARY_COLOR,
-      //             icon: Icon(Icons.search),
-      //             onPressed: () {},
-      //           ),
-      //           IconButton(
-      //             color: AppColors.PRIMARY_COLOR,
-      //             icon: Icon(Icons.filter_alt_outlined),
-      //             onPressed: () {},
-      //           ),
-      //         ],
-      //       ),
-      //     ];
-      //   },
-      //   body: _pages[_selectedIndex],
-      // ),
       extendBody: true,
       bottomNavigationBar: Padding(
         padding: const EdgeInsets.only(bottom: 10.0),

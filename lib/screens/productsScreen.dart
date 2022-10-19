@@ -90,78 +90,85 @@ class _ProductScreenState extends State<ProductScreen> with SingleTickerProvider
           ),
         ),
       ),
-      body: SingleChildScrollView(
-        physics: BouncingScrollPhysics(),
-          child:Padding(
-            padding: EdgeInsets.only(bottom:Constants.BODY_BOTTOM_PADDING),
-            child: Center(
-              child: Column(
-                mainAxisAlignment: MainAxisAlignment.start,
-                crossAxisAlignment: CrossAxisAlignment.center,
-                children: [
-                  // Container(
-                  //   width: 0.95.sw,
-                  //   height: 45.h,
-                  //   padding: EdgeInsets.only(top: 12),
-                  //   child: TextField(
-                  //     onTap: ()=>showSearch(context: context, delegate: CustomSearchDelegate()),
-                  //     readOnly: true,
-                  //     autofocus: false,
-                  //     decoration: InputDecoration(
-                  //       filled: true,
-                  //       fillColor: Colors.white,
-                  //       hintText: 'Search',
-                  //       hintStyle: TextStyle(fontStyle: FontStyle.italic,color:Colors.grey.withOpacity(0.8) ),
-                  //       contentPadding: const EdgeInsets.only(left: 14.0, bottom: 8.0, top: 8.0),
-                  //       focusedBorder: OutlineInputBorder(
-                  //         borderSide: BorderSide(color: Colors.grey.withOpacity(0.5)),
-                  //         borderRadius: BorderRadius.circular(12),
-                  //       ),
-                  //       enabledBorder: OutlineInputBorder(
-                  //         borderSide: BorderSide(color: Colors.grey.withOpacity(0.5)),
-                  //         borderRadius: BorderRadius.circular(12),
-                  //       ),
-                  //     ),
-                  //   ),
-                  // ),
-                  // Align(
-                  //   alignment:Alignment(-1,0),
-                  //   child: Container(
-                  //     width:0.75.sw,
-                  //     height: 0.05.sh,
-                  //     child: TabBar(
-                  //       labelStyle: TextStyle(fontSize:12.sp,fontWeight: FontWeight.bold),
-                  //       unselectedLabelColor: Colors.black,
-                  //       labelColor: AppColors.PRIMARY_COLOR,
-                  //       tabs: [
-                  //         Tab(
-                  //           text: 'Products',
-                  //         ),
-                  //         Tab(
-                  //           text: 'My Subscriptions',
-                  //         )
-                  //       ],
-                  //       controller: _tabController,
-                  //       indicatorSize: TabBarIndicatorSize.tab,
-                  //       indicatorColor: AppColors.PRIMARY_COLOR,
-                  //     ),
-                  //   ),
-                  // ),
-                  SizedBox(
-                    height: 1.sh,
-                    child: TabBarView(
-                      children: [
-                        ProductsPage(),
-                        MySubscriptions()
-                      ],
-                      controller: _tabController,
-                    ),
-                  ),
-                ],
-              ),
-            ),
-          ),
+      body: TabBarView(
+        children: [
+          ProductsPage(),
+          MySubscriptions()
+        ],
+        controller: _tabController,
       ),
+      // SingleChildScrollView(
+      //   physics: BouncingScrollPhysics(),
+      //     child:Padding(
+      //       padding: EdgeInsets.only(bottom:Constants.BODY_BOTTOM_PADDING),
+      //       child: Center(
+      //         child: Column(
+      //           mainAxisAlignment: MainAxisAlignment.start,
+      //           crossAxisAlignment: CrossAxisAlignment.center,
+      //           children: [
+      //             // Container(
+      //             //   width: 0.95.sw,
+      //             //   height: 45.h,
+      //             //   padding: EdgeInsets.only(top: 12),
+      //             //   child: TextField(
+      //             //     onTap: ()=>showSearch(context: context, delegate: CustomSearchDelegate()),
+      //             //     readOnly: true,
+      //             //     autofocus: false,
+      //             //     decoration: InputDecoration(
+      //             //       filled: true,
+      //             //       fillColor: Colors.white,
+      //             //       hintText: 'Search',
+      //             //       hintStyle: TextStyle(fontStyle: FontStyle.italic,color:Colors.grey.withOpacity(0.8) ),
+      //             //       contentPadding: const EdgeInsets.only(left: 14.0, bottom: 8.0, top: 8.0),
+      //             //       focusedBorder: OutlineInputBorder(
+      //             //         borderSide: BorderSide(color: Colors.grey.withOpacity(0.5)),
+      //             //         borderRadius: BorderRadius.circular(12),
+      //             //       ),
+      //             //       enabledBorder: OutlineInputBorder(
+      //             //         borderSide: BorderSide(color: Colors.grey.withOpacity(0.5)),
+      //             //         borderRadius: BorderRadius.circular(12),
+      //             //       ),
+      //             //     ),
+      //             //   ),
+      //             // ),
+      //             // Align(
+      //             //   alignment:Alignment(-1,0),
+      //             //   child: Container(
+      //             //     width:0.75.sw,
+      //             //     height: 0.05.sh,
+      //             //     child: TabBar(
+      //             //       labelStyle: TextStyle(fontSize:12.sp,fontWeight: FontWeight.bold),
+      //             //       unselectedLabelColor: Colors.black,
+      //             //       labelColor: AppColors.PRIMARY_COLOR,
+      //             //       tabs: [
+      //             //         Tab(
+      //             //           text: 'Products',
+      //             //         ),
+      //             //         Tab(
+      //             //           text: 'My Subscriptions',
+      //             //         )
+      //             //       ],
+      //             //       controller: _tabController,
+      //             //       indicatorSize: TabBarIndicatorSize.tab,
+      //             //       indicatorColor: AppColors.PRIMARY_COLOR,
+      //             //     ),
+      //             //   ),
+      //             // ),
+      //             // SizedBox(
+      //             //   height: 1.sh,
+      //             //   child: TabBarView(
+      //             //     children: [
+      //             //       ProductsPage(),
+      //             //       MySubscriptions()
+      //             //     ],
+      //             //     controller: _tabController,
+      //             //   ),
+      //             // ),
+      //           ],
+      //         ),
+      //       ),
+      //     ),
+      // ),
     );
   }
 }

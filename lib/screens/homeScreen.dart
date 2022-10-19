@@ -1,11 +1,14 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:carousel_slider/carousel_slider.dart';
+import 'package:intl/intl.dart';
 import 'package:theharmony/constants/colors.dart';
+import 'package:theharmony/screens/productScreen/mySubscriptionsPage.dart';
 import 'package:theharmony/widgets/customCard.dart';
 
 import '../delegates/customSearchDelegate.dart';
 import '../widgets/balanceCard.dart';
+import '../widgets/itemDateStatus.dart';
 
 class HomeScreen extends StatefulWidget {
   const HomeScreen({Key? key}) : super(key: key);
@@ -15,7 +18,6 @@ class HomeScreen extends StatefulWidget {
 }
 
 class _HomeScreenState extends State<HomeScreen> {
-
   @override
   Widget build(BuildContext context) {
     List<String> imgList = [
@@ -41,17 +43,17 @@ class _HomeScreenState extends State<HomeScreen> {
               onPressed: () => showSearch(
                 context: context,
                 delegate: CustomSearchDelegate(
-                //     searchTerms: [
-                //   "Cashew",
-                //   "Pistachio",
-                //   "Almonds",
-                //   "Dried Fruits",
-                //   "Seeds",
-                //   "Raisins",
-                //   "Milk",
-                //   "Paneer"
-                // ],
-                ),
+                    //     searchTerms: [
+                    //   "Cashew",
+                    //   "Pistachio",
+                    //   "Almonds",
+                    //   "Dried Fruits",
+                    //   "Seeds",
+                    //   "Raisins",
+                    //   "Milk",
+                    //   "Paneer"
+                    // ],
+                    ),
               ),
             ),
             Container(
@@ -64,11 +66,126 @@ class _HomeScreenState extends State<HomeScreen> {
           physics: BouncingScrollPhysics(),
           child: Center(
             child: Padding(
-              padding: const EdgeInsets.only(bottom:70.0),
+              padding: const EdgeInsets.only(bottom: 70.0),
               child: Column(
                 mainAxisAlignment: MainAxisAlignment.start,
                 crossAxisAlignment: CrossAxisAlignment.center,
                 children: [
+                  Container(
+                    margin: EdgeInsets.only(top: 10.sm),
+                    height: 0.2.sh,
+                    width: 0.95.sw,
+                    decoration: BoxDecoration(
+                        borderRadius: BorderRadius.circular(12.0),
+                        border:
+                            Border.all(color: Colors.grey.withOpacity(0.2))),
+                    child: Column(
+                      mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                      crossAxisAlignment: CrossAxisAlignment.center,
+                      children: [
+                        Text(
+                          DateFormat.MMMM().format(DateTime.now()).toString(),
+                          style: TextStyle(fontWeight: FontWeight.bold),
+                        ),
+                        ItemDateStatus(),
+                      ],
+                    ),
+                  ),
+                  Container(
+                    margin: EdgeInsets.only(top: 10.sm),
+                    padding:
+                        EdgeInsets.symmetric(vertical: 12.0, horizontal: 12.0),
+                    height: 0.2.sh,
+                    width: 0.95.sw,
+                    decoration: BoxDecoration(
+                        borderRadius: BorderRadius.circular(12.0),
+                        border:
+                            Border.all(color: Colors.grey.withOpacity(0.2))),
+                    child: Column(
+                      mainAxisAlignment: MainAxisAlignment.start,
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: [
+                        Text(
+                          '2 items will be delivered to you tomorrow',
+                          style: TextStyle(
+                              fontSize: 12.sp,
+                              color: Colors.black,
+                              fontWeight: FontWeight.w500),
+                        ),
+                        SizedBox(height: 10),
+                        Row(
+                          children: [
+                            SizedBox(
+                                width: 0.15.sw,
+                                child: Image.asset('assets/product2.png')),
+                            RichText(
+                              text: TextSpan(
+                                  text: 'Cashew(White Wholes) ',
+                                  style: TextStyle(
+                                      fontSize: 14.sp,
+                                      color: Colors.black,
+                                      fontWeight: FontWeight.w500),
+                                  children: [
+                                    TextSpan(
+                                        text: ' 200gm ',
+                                        style: TextStyle(
+                                            fontSize: 12.sp,
+                                            color: Colors.grey)),
+                                    TextSpan(
+                                      text: ' Qty:1',
+                                      style: TextStyle(
+                                          fontSize: 14.sp, color: Colors.black),
+                                    ),
+                                  ]),
+                            ),
+                          ],
+                        ),
+                        SizedBox(height: 10),
+                        Row(
+                          children: [
+                            SizedBox(
+                                width: 0.15.sw,
+                                child: Image.asset('assets/product1.png')),
+                            RichText(
+                              text: TextSpan(
+                                  text: 'Mixed Nuts ',
+                                  style: TextStyle(
+                                      fontSize: 14.sp,
+                                      color: Colors.black,
+                                      fontWeight: FontWeight.w500),
+                                  children: [
+                                    TextSpan(
+                                        text: ' 300gm ',
+                                        style: TextStyle(
+                                            fontSize: 12.sp,
+                                            color: Colors.grey)),
+                                    TextSpan(
+                                      text: ' Qty:1',
+                                      style: TextStyle(
+                                          fontSize: 14.sp, color: Colors.black),
+                                    ),
+                                  ]),
+                            ),
+                          ],
+                        ),
+                        GestureDetector(
+                          onTap: ()=>Navigator.push(context, MaterialPageRoute(builder: (_)=> MySubscriptions(fromHome: true,))),
+                          child: Align(
+                            alignment: Alignment.bottomRight,
+                            child: Container(
+                              height: 0.04.sh,
+                              width: 0.28.sw,
+                              decoration: BoxDecoration(
+                                borderRadius: BorderRadius.circular(12.0),
+                                color: AppColors.PRIMARY_COLOR,
+                              ),
+                              child: Center(child:Text('Add More',style: TextStyle(fontSize: 14.sp,color: Colors.white,fontWeight: FontWeight.w500),)),
+                            ),
+                          ),
+                        )
+                      ],
+                    ),
+                  ),
                   Container(
                     margin: EdgeInsets.only(top: 20.sm),
                     height: 0.24.sh,

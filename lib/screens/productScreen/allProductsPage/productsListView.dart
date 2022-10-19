@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:provider/provider.dart';
 import 'package:theharmony/provider/providers/cartItemCount.dart';
+import 'package:theharmony/screens/customizePlanPage.dart';
 import 'package:theharmony/screens/productScreen/productDetailPage.dart';
 import 'package:theharmony/widgets/customButtons/minus.dart';
 
@@ -10,7 +11,9 @@ import '../../../widgets/customButtons/plus.dart';
 
 class ProductsListView extends StatefulWidget {
   final List<Map<String, String>> itemList;
-  const ProductsListView({required this.itemList, Key? key}) : super(key: key);
+  final bool? goToCustomize;
+  const ProductsListView({required this.itemList, this.goToCustomize, Key? key})
+      : super(key: key);
 
   @override
   _ProductsListViewState createState() => _ProductsListViewState();
@@ -24,11 +27,19 @@ class _ProductsListViewState extends State<ProductsListView> {
       itemCount: widget.itemList.length,
       separatorBuilder: (context, index) => SizedBox(height: 10),
       itemBuilder: (context, index) => GestureDetector(
-        onTap: () => Navigator.push(
-            context,
-            MaterialPageRoute(
-                builder: (_) =>
-                    ProductDetailPage(itemDetails:widget.itemList[index],index: index,))),
+        onTap: () => widget.goToCustomize == true
+            ? Navigator.push(
+                context,
+                MaterialPageRoute(
+                    builder: (_) => CustomizePlanPage(
+                        details: widget.itemList[index], index: index)))
+            : Navigator.push(
+                context,
+                MaterialPageRoute(
+                    builder: (_) => ProductDetailPage(
+                          itemDetails: widget.itemList[index],
+                          index: index,
+                        ))),
         child: Container(
           padding: EdgeInsets.all(12.0),
           height: 0.15.sh,

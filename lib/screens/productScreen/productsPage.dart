@@ -16,6 +16,7 @@ class ProductsPage extends StatelessWidget {
       'assets/banner3.png'
     ];
     return SingleChildScrollView(
+      physics:const BouncingScrollPhysics(),
           child: Column(
             children: [
               card(
@@ -78,6 +79,7 @@ class ProductsPage extends StatelessWidget {
                             ],
                             title: 'Dairy Products',
                           )))),
+              SizedBox(height: 0.2.sh),
             ],
           ),
         );

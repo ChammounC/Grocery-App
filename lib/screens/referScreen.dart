@@ -3,6 +3,8 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:theharmony/widgets/dottedLine.dart';
 
+import '../constants/colors.dart';
+
 class ReferScreen extends StatelessWidget {
   const ReferScreen({Key? key}) : super(key: key);
 
@@ -43,13 +45,13 @@ class ReferScreen extends StatelessWidget {
               Wrap(
                 crossAxisAlignment: WrapCrossAlignment.center,
                 children: [
-                  Icon(Icons.info, color: Color(0xFF6765ef).withOpacity(0.7)),
+                  Icon(Icons.info, color: AppColors.PRIMARY_COLOR.withOpacity(0.8)),
                   SizedBox(width: 10),
                   Text('How it works',
                       style: TextStyle(
                           fontSize: 16.sp,
                           fontWeight: FontWeight.w500,
-                          color: Color(0xFF6765ef).withOpacity(0.7))),
+                          color: AppColors.PRIMARY_COLOR.withOpacity(0.8))),
                 ],
               ),
               SizedBox(height: 0.02.sh),
@@ -226,19 +228,19 @@ class ReferScreen extends StatelessWidget {
                 width: 0.9.sw,
                 decoration: BoxDecoration(
                     borderRadius: BorderRadius.circular(12.0),
-                    color: Color(0xFFe8e9ff)),
+                    color: Color(0xFF5c80bc).withOpacity(0.7)),
                 child: Row(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
                     Text('http://dummyReferralCode/abcd123',
                         style: TextStyle(
                             fontSize: 14.sp,
-                            color: Color(0xFF6765ef).withOpacity(0.7),
+                            color: Colors.white,
                             fontWeight: FontWeight.w500)),
                     Text('copy',
                         style: TextStyle(
                             fontSize: 18.sp,
-                            color: Color(0xFF6765ef),
+                            color: Colors.white,
                             fontWeight: FontWeight.bold))
                   ],
                 ),
@@ -251,7 +253,7 @@ class ReferScreen extends StatelessWidget {
                 width: 0.9.sw,
                 decoration: BoxDecoration(
                     borderRadius: BorderRadius.circular(12.0),
-                    color: Color(0xFF32cd99)),
+                    color: AppColors.PRIMARY_COLOR),
                 child: Row(
                   mainAxisAlignment: MainAxisAlignment.start,
                   children: [
