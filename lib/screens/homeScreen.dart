@@ -21,9 +21,9 @@ class _HomeScreenState extends State<HomeScreen> {
   @override
   Widget build(BuildContext context) {
     List<String> imgList = [
-      'assets/banner1.png',
-      'assets/banner2.png',
-      'assets/banner3.png'
+      'assets/images/banner1.png',
+      'assets/images/banner2.png',
+      'assets/images/banner3.png'
     ];
     return GestureDetector(
       onTap: () {
@@ -32,9 +32,10 @@ class _HomeScreenState extends State<HomeScreen> {
       child: Scaffold(
         appBar: AppBar(
           toolbarHeight: 60.sp,
+          leadingWidth: 0,
           elevation: 0,
           title:
-              SizedBox(height: 0.03.sh, child: Image.asset('assets/logo.png')),
+              SizedBox(height: 0.03.sh, child: Image.asset('assets/images/logo.png')),
           backgroundColor: Colors.white,
           actions: [
             IconButton(
@@ -117,7 +118,7 @@ class _HomeScreenState extends State<HomeScreen> {
                           children: [
                             SizedBox(
                                 width: 0.15.sw,
-                                child: Image.asset('assets/product2.png')),
+                                child: Image.asset('assets/images/product2.png')),
                             RichText(
                               text: TextSpan(
                                   text: 'Cashew(White Wholes) ',
@@ -145,7 +146,7 @@ class _HomeScreenState extends State<HomeScreen> {
                           children: [
                             SizedBox(
                                 width: 0.15.sw,
-                                child: Image.asset('assets/product1.png')),
+                                child: Image.asset('assets/images/product1.png')),
                             RichText(
                               text: TextSpan(
                                   text: 'Mixed Nuts ',
@@ -247,11 +248,11 @@ class _HomeScreenState extends State<HomeScreen> {
                           Column(
                             children: const [
                               CustomCard(
-                                  imageUrl: 'assets/product1.png',
+                                  imageUrl: 'assets/images/product1.png',
                                   price: '315',
                                   name: 'Cashew'),
                               CustomCard(
-                                  imageUrl: 'assets/product1.png',
+                                  imageUrl: 'assets/images/product1.png',
                                   price: '390',
                                   name: 'Pistachio'),
                             ],
@@ -259,11 +260,11 @@ class _HomeScreenState extends State<HomeScreen> {
                           Column(
                             children: const [
                               CustomCard(
-                                  imageUrl: 'assets/product1.png',
+                                  imageUrl: 'assets/images/product1.png',
                                   price: '360',
                                   name: 'Almonds'),
                               CustomCard(
-                                  imageUrl: 'assets/product1.png',
+                                  imageUrl: 'assets/images/product1.png',
                                   price: '160',
                                   name: 'Raisins'),
                             ],
@@ -302,7 +303,7 @@ class _HomeScreenState extends State<HomeScreen> {
                                   padding: EdgeInsets.all(10),
                                   height: 0.23.sw,
                                   width: 0.23.sw,
-                                  child: Image.asset('assets/dairy.png')),
+                                  child: Image.asset('assets/images/dairy.png')),
                             ),
                             Text(
                               'Dairy Products',
@@ -319,7 +320,7 @@ class _HomeScreenState extends State<HomeScreen> {
                                   padding: EdgeInsets.all(10),
                                   height: 0.23.sw,
                                   width: 0.23.sw,
-                                  child: Image.asset('assets/nuts.png')),
+                                  child: Image.asset('assets/images/nuts.png')),
                             ),
                             Text(
                               'Nuts & Snacks',
@@ -336,7 +337,7 @@ class _HomeScreenState extends State<HomeScreen> {
                                   padding: EdgeInsets.all(10),
                                   height: 0.23.sw,
                                   width: 0.23.sw,
-                                  child: Image.asset('assets/special.png')),
+                                  child: Image.asset('assets/images/special.png')),
                             ),
                             Text(
                               'theHarmony',
@@ -373,7 +374,7 @@ class _HomeScreenState extends State<HomeScreen> {
                       child: ClipRRect(
                         borderRadius: BorderRadius.circular(12.0),
                         child: Image.asset(
-                          'assets/referal.png',
+                          'assets/images/referal.png',
                           fit: BoxFit.cover,
                         ),
                       ),

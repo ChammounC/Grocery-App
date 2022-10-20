@@ -36,13 +36,14 @@ class ItemDateStatus extends StatelessWidget {
           Row(
             mainAxisAlignment: MainAxisAlignment.spaceEvenly,
             children: [
-              Item(day: 'Mon', date: 17,today:todayDate, status: 1, constraints: constraints),
-              Item(day: 'Tue', date: 18,today:todayDate, status: 1, constraints: constraints),
+
               Item(day: 'Wed', date: 19,today:todayDate, status: 1, constraints: constraints),
               Item(day: 'Thu', date: 20,today:todayDate, status: 1, constraints: constraints),
               Item(day: 'Fri', date: 21,today:todayDate, status: 1, constraints: constraints),
               Item(day: 'Sat', date: 22,today:todayDate, status: 1, constraints: constraints),
               Item(day: 'Sun', date: 23,today:todayDate, status: 1, constraints: constraints),
+              Item(day: 'Mon', date: 24,today:todayDate, status: 1, constraints: constraints),
+              Item(day: 'Tue', date: 25,today:todayDate, status: 1, constraints: constraints),
             ],
           ),
           SizedBox(height: 20),

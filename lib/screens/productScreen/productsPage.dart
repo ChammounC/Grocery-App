@@ -11,16 +11,16 @@ class ProductsPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     List<String> imgList = [
-      'assets/banner1.png',
-      'assets/banner2.png',
-      'assets/banner3.png'
+      'assets/images/banner1.png',
+      'assets/images/banner2.png',
+      'assets/images/banner3.png'
     ];
     return SingleChildScrollView(
       physics:const BouncingScrollPhysics(),
           child: Column(
             children: [
               card(
-                  'assets/nuts1.jpg',
+                  'assets/images/nuts1.jpg',
                   'Nuts & Snacks',
                   '47',
                   'Cashews, Pistachio, Peanuts, Almonds, Raisins, Dry Fruits, Seeds',
@@ -40,7 +40,7 @@ class ProductsPage extends StatelessWidget {
                                 title: 'Nuts & Snacks',
                               )))),
               card(
-                  'assets/tea.jpg',
+                  'assets/images/tea.jpg',
                   'Tea Products',
                   '67',
                   'Black Tea, Green Tea, Oolong Tea, White Tea, Pu-erh. Tea, Yellow Tea, Herbal Tea, Yerba Mate & Guayusa',
@@ -61,7 +61,7 @@ class ProductsPage extends StatelessWidget {
                             title: 'Tea Products',
                           )))),
               card(
-                  'assets/dairy1.jpg',
+                  'assets/images/dairy1.jpg',
                   'Dairy Products',
                   '158',
                   'Milk, Eggs, Bread, Chemical Free Dals, theHarmony Specials, Paneer',

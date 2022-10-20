@@ -2,10 +2,12 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:provider/provider.dart';
 import 'package:theharmony/constants/colors.dart';
+import 'package:theharmony/models/cartproduct.dart';
 import 'package:theharmony/screens/productScreen/allProductsPage/productsListView.dart';
 
 import '../../delegates/customSearchDelegate.dart';
 import '../../provider/providers/cartItemCount.dart';
+import '../miscScreens/mycart.dart';
 
 class AllDairyProductsPage extends StatefulWidget {
   final List<String> itemList;
@@ -36,49 +38,49 @@ class _AllDairyProductsPageState extends State<AllDairyProductsPage>
       'productName':'Dry Fruits',
       'price' : '397',
       'weight' : '200 gm',
-      'imgUrl' : 'assets/nuts.png'
+      'imgUrl' : 'assets/images/nuts.png'
     },
     {
       'productName':'Dry Fruits',
       'price' : '259',
       'weight' : '100 gm',
-      'imgUrl' : 'assets/product1.png'
+      'imgUrl' : 'assets/images/product1.png'
     },
     {
       'productName':'Dry Fruits',
       'price' : '243',
       'weight' : '250 gm',
-      'imgUrl' : 'assets/special.png'
+      'imgUrl' : 'assets/images/special.png'
     },
     {
       'productName':'Special',
       'price' : '415',
       'weight' : '300 gm',
-      'imgUrl' : 'assets/product1.png'
+      'imgUrl' : 'assets/images/product1.png'
     },
     {
       'productName':'Nuts',
       'price' : '397',
       'weight' : '200 gm',
-      'imgUrl' : 'assets/nuts.png'
+      'imgUrl' : 'assets/images/nuts.png'
     },
     {
       'productName':'Dry Fruits',
       'price' : '259',
       'weight' : '100 gm',
-      'imgUrl' : 'assets/product1.png'
+      'imgUrl' : 'assets/images/product1.png'
     },
     {
       'productName':'Dry Fruits',
       'price' : '243',
       'weight' : '250 gm',
-      'imgUrl' : 'assets/special.png'
+      'imgUrl' : 'assets/images/special.png'
     },
     {
       'productName':'Special',
       'price' : '415',
       'weight' : '300 gm',
-      'imgUrl' : 'assets/product1.png'
+      'imgUrl' : 'assets/images/product1.png'
     },
   ];
 
@@ -146,17 +148,20 @@ class _AllDairyProductsPageState extends State<AllDairyProductsPage>
           Provider.of<CartItem>(context).cartEmpty?Container():Positioned(
             bottom:0.025.sh,
             left:0.2.sw,
-            child: Container(
-                width:0.6.sw,
-                height: 0.05.sh,
-                decoration: BoxDecoration(
-                    borderRadius: BorderRadius.circular(12.0),
-                    color: AppColors.PRIMARY_COLOR.withOpacity(0.2),
-                    border: Border.all(
-                        color: AppColors.PRIMARY_COLOR
-                    )
-                ),
-                child: Center(child: Text('Go to Cart',style: TextStyle(color: AppColors.PRIMARY_COLOR,fontSize: 16.sp,fontWeight: FontWeight.w500),))
+            child: GestureDetector(
+              onTap: ()=>Navigator.push(context, MaterialPageRoute(builder: (_)=> MyCart())),
+              child: Container(
+                  width:0.6.sw,
+                  height: 0.05.sh,
+                  decoration: BoxDecoration(
+                      borderRadius: BorderRadius.circular(12.0),
+                      color: AppColors.PRIMARY_COLOR.withOpacity(0.2),
+                      border: Border.all(
+                          color: AppColors.PRIMARY_COLOR
+                      )
+                  ),
+                  child: Center(child: Text('Go to Cart',style: TextStyle(color: AppColors.PRIMARY_COLOR,fontSize: 16.sp,fontWeight: FontWeight.w500),))
+              ),
             ),
           )
         ],

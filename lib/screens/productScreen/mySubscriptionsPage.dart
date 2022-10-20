@@ -20,49 +20,49 @@ class _MySubscriptionsState extends State<MySubscriptions> {
       'productName':'Dry Fruits',
       'price' : '397',
       'weight' : '200 gm',
-      'imgUrl' : 'assets/nuts.png'
+      'imgUrl' : 'assets/images/nuts.png'
     },
     {
       'productName':'Dry Fruits',
       'price' : '259',
       'weight' : '100 gm',
-      'imgUrl' : 'assets/product1.png'
+      'imgUrl' : 'assets/images/product1.png'
     },
     {
       'productName':'Dry Fruits',
       'price' : '243',
       'weight' : '250 gm',
-      'imgUrl' : 'assets/special.png'
+      'imgUrl' : 'assets/images/special.png'
     },
     {
       'productName':'Special',
       'price' : '415',
       'weight' : '300 gm',
-      'imgUrl' : 'assets/product1.png'
+      'imgUrl' : 'assets/images/product1.png'
     },
     {
       'productName':'Nuts',
       'price' : '397',
       'weight' : '200 gm',
-      'imgUrl' : 'assets/nuts.png'
+      'imgUrl' : 'assets/images/nuts.png'
     },
     {
       'productName':'Dry Fruits',
       'price' : '259',
       'weight' : '100 gm',
-      'imgUrl' : 'assets/product1.png'
+      'imgUrl' : 'assets/images/product1.png'
     },
     {
       'productName':'Dry Fruits',
       'price' : '243',
       'weight' : '250 gm',
-      'imgUrl' : 'assets/special.png'
+      'imgUrl' : 'assets/images/special.png'
     },
     {
       'productName':'Special',
       'price' : '415',
       'weight' : '300 gm',
-      'imgUrl' : 'assets/product1.png'
+      'imgUrl' : 'assets/images/product1.png'
     },
   ];
   @override
@@ -112,7 +112,7 @@ class _MySubscriptionsState extends State<MySubscriptions> {
             )
             // Center(
             //   child: Image.asset(
-            //     'assets/empty.png',
+            //     'assets/images/empty.png',
             //     width: 0.7.sw,
             //     height: 0.75.sw,
             //   ),

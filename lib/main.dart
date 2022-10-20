@@ -2,10 +2,10 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:provider/provider.dart';
 import 'package:theharmony/provider/providers/cartItemCount.dart';
+import 'package:theharmony/screens/splash.dart';
 import 'package:theharmony/widgets/customNavbar/floating_navbar.dart';
 import 'package:theharmony/widgets/customNavbar/floating_navbar_item.dart';
 import 'screens/homeScreen.dart';
-import 'screens/memberScreen.dart';
 import 'screens/productsScreen.dart';
 import 'screens/referScreen.dart';
 import 'screens/moreScreen.dart';
@@ -34,7 +34,7 @@ class MyApp extends StatelessWidget {
           ),
         );
       },
-      child: const HomePage()
+      child: const SplashPage()
     );
   }
 }

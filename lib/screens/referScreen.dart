@@ -28,7 +28,7 @@ class ReferScreen extends StatelessWidget {
                 child: ClipRRect(
                   borderRadius: BorderRadius.circular(12.0),
                   child: Image.asset(
-                    'assets/refer.jpg',
+                    'assets/images/refer.jpg',
                     fit: BoxFit.cover,
                   ),
                 ),

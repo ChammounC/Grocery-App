@@ -10,6 +10,7 @@ import '../../provider/providers/cartItemCount.dart';
 import '../../widgets/customButtons/minus.dart';
 import '../../widgets/customButtons/plus.dart';
 import '../../widgets/unorderedList.dart';
+import '../miscScreens/mycart.dart';
 class ProductDetailPage extends StatefulWidget {
   final Map<String, String> itemDetails;
   final int index;
@@ -247,18 +248,21 @@ class _ProductDetailPageState extends State<ProductDetailPage> {
                   ],
                 ),
               ),
-              Provider.of<CartItem>(context).cartEmpty?Container():Center(
-                child: Container(
-                    width:0.6.sw,
-                    height: 0.05.sh,
-                    decoration: BoxDecoration(
-                        borderRadius: BorderRadius.circular(12.0),
-                        color: AppColors.PRIMARY_COLOR.withOpacity(0.2),
-                        border: Border.all(
-                            color: AppColors.PRIMARY_COLOR
-                        )
-                    ),
-                    child: Center(child: Text('Go to Cart',style: TextStyle(color: AppColors.PRIMARY_COLOR,fontSize: 16.sp,fontWeight: FontWeight.w500),))
+              Provider.of<CartItem>(context).cartEmpty?Container():GestureDetector(
+                onTap: ()=>Navigator.push(context, MaterialPageRoute(builder: (_)=> MyCart())),
+                child: Center(
+                  child: Container(
+                      width:0.6.sw,
+                      height: 0.05.sh,
+                      decoration: BoxDecoration(
+                          borderRadius: BorderRadius.circular(12.0),
+                          color: AppColors.PRIMARY_COLOR.withOpacity(0.2),
+                          border: Border.all(
+                              color: AppColors.PRIMARY_COLOR
+                          )
+                      ),
+                      child: Center(child: Text('Go to Cart',style: TextStyle(color: AppColors.PRIMARY_COLOR,fontSize: 16.sp,fontWeight: FontWeight.w500),))
+                  ),
                 ),
               ),
             ],

@@ -36,6 +36,7 @@ class _ProductScreenState extends State<ProductScreen> with SingleTickerProvider
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
+        leadingWidth: 0,
         elevation: 0,
         backgroundColor: Colors.transparent,
         title: Container(
